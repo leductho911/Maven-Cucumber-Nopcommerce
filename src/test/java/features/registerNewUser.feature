@@ -1,5 +1,8 @@
-@register_login
-Feature: User Registration and Login
+
+Feature: Register New User
+  As a user
+  I want to be able to register a new account
+  So that I can access the system
 
   @register_success
   Scenario Outline: Successful registration
@@ -14,17 +17,9 @@ Feature: User Registration and Login
 
     Examples:
       | firstname | lastname | email                | password   |
-      | Tho       | Le       | 2use435r123@gmail.com  | Pa$$w0rd   |
-      | Minh      | Tuan     | 2anothe435remail2@gmail.com  | StrongP@ss |
-      | Ngoc      | Trang    | 2tester343525@example.com | Secret123  |
-
-  @login
-  Scenario: User login
-    Given the user is on the login page
-    When the user input to "Email" textbox with value "2use435r123@gmail.com"
-    And the user input to "Password" textbox with value "Pa$$w0rd"
-    And they click the "Log in" button
-    Then they should be logged in successfully
+      | Tho       | Le       | use435r123@gmail.com  | Pa$$w0rd   |
+      | Minh      | Tuan     | anothe435remail2@gmail.com  | StrongP@ss |
+      | Ngoc      | Trang    | tester343525@example.com | Secret123  |
 
 
 

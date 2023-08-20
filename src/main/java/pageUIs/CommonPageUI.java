@@ -1,6 +1,6 @@
 package pageUIs;
 
-public class BasePageUI {
+public class CommonPageUI {
 
 	public static final String NOTICICATION_BAR_MESSAGE = "css=#bar-notification .content";
 	public static final String NOTICICATION_BAR_CLOSE_BUTTON = "css=#bar-notification span[title='Close']";

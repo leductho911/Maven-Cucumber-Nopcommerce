@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
 		monochrome = true,
 		plugin = {"pretty",
 				"html:target/cucumber-reports/TestRunner.html",
-				"json:target/cucumber-reports/TestRunner.json" },
+				"json:target/cucumber-reports/TestRunner.json",
+				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" },
 		snippets = CucumberOptions.SnippetType.CAMELCASE,
 		tags = "@register_login")
 

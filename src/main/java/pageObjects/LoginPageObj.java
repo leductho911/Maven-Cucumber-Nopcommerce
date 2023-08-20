@@ -2,7 +2,7 @@ package pageObjects;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.LoginPageUI;
+import pageUIs.HomePageUI;
 
 public class LoginPageObj extends BasePage {
 	private WebDriver driver;
@@ -11,14 +11,5 @@ public class LoginPageObj extends BasePage {
 		super(driver);
 		this.driver = driver;
 	}
-	public String getErrorMessageAtEmailTextbox() {
-		waitForElementVisible(LoginPageUI.EMAIL_ERROR_MESSAGE);
-		return getElementText(LoginPageUI.EMAIL_ERROR_MESSAGE);
-	}
 
-
-	public String getErrorMessageAtLoginPage() {
-		waitForElementVisible(LoginPageUI.LOGIN_ERROR_MESSAGE);
-		return getElementText(LoginPageUI.LOGIN_ERROR_MESSAGE);
-	}
 }

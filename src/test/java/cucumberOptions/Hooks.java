@@ -1,6 +1,8 @@
 package cucumberOptions;
 import java.time.Duration;
+
 import io.cucumber.java.Before;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,15 +17,10 @@ public class Hooks {
 	@Before
 	public synchronized static WebDriver openAndQuitBrowser() {
 		String browser = System.getProperty("BROWSER");
-		System.out.println("Browser name run by command line = " + browser);
-
 		if (driver == null) {
 			try {
 				if (browser == null) {
-					browser = System.getenv("BROWSER");
-					if (browser == null) {
-						browser = "chrome";
-					}
+					browser = "chrome";
 				}
 
 				if ("chrome".equalsIgnoreCase(browser)) {
@@ -63,5 +60,7 @@ public class Hooks {
 			System.out.println("Can not close the browser");
 		}
 	}
+
+
 
 }

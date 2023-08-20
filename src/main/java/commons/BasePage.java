@@ -7,10 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects.HomePageObj;
-import pageObjects.ProductDetailPageObj;
-import pageUIs.BasePageUI;
-import pageUIs.HomePageUI;
 
 import java.time.Duration;
 import java.util.*;
@@ -589,144 +585,8 @@ public class BasePage {
 		return sortedList.equals(arrayList);
 	}
 
-	public void clickToButton(String button) {
-		waitForElementClickable(BasePageUI.BUTTON, button);
-		clickToElement(BasePageUI.BUTTON, button);
-		sleepInSecond(1);
-	}
-
-	public void clickToLinkAtHeader(String linkText) {
-		waitForElementClickable(BasePageUI.HEADER_LINKS, linkText);
-		clickToElement(BasePageUI.HEADER_LINKS, linkText);
-	}
-
-
-	public void clickToLinkAtFooter(String linkText) {
-		waitForElementClickable(BasePageUI.FOOTER_LINKS, linkText);
-		clickToElement(BasePageUI.FOOTER_LINKS, linkText);
-	}
-
-	public void inputToTextboxByLabel(String label, String value) {
-		waitForElementClickable(BasePageUI.LABEL_INPUT, label);
-		sendKeysToElement(BasePageUI.LABEL_INPUT, value, label);
-	}
-
-	public void inputToTextareaByLabel(String label, String value) {
-		waitForElementClickable(BasePageUI.LABEL_TEXTAREA, label);
-		sendKeysToElement(BasePageUI.LABEL_TEXTAREA, value, label);
-	}
-
-	public void checkToCheckboxByLabel(String label) {
-		waitForElementClickable(BasePageUI.LABEL_CHECKBOX, label);
-		checkToDefaultCheckboxOrRadio(BasePageUI.LABEL_CHECKBOX, label);
-	}
-
-	public void uncheckToCheckboxByLabel(String label) {
-		waitForElementClickable(BasePageUI.LABEL_CHECKBOX, label);
-		uncheckToDefaultCheckbox(BasePageUI.LABEL_CHECKBOX, label);
-	}
-
-	public void selectItemInDropdownByLabel(String label, String value) {
-		waitForElementClickable(BasePageUI.LABEL_DROPDOWN, label);
-		selectItemInDefaultDropdown(BasePageUI.LABEL_DROPDOWN, value, label);
-	}
-
-	public boolean isHomepageDisplayed() {
-		waitForElementVisible(HomePageUI.WELCOME_TEXT);
-		return isElementDisplayed(HomePageUI.WELCOME_TEXT);
-	}
-
-	public void openPageByPageName(String pageName) {
-		waitForElementClickable(BasePageUI.LEFT_SIDEBAR_PAGE_LINKS, pageName);
-		clickToElement(BasePageUI.LEFT_SIDEBAR_PAGE_LINKS, pageName);
-	}
-
-	public String getMessageAppearAtNotificationBar() {
-		waitForElementVisible(BasePageUI.NOTICICATION_BAR_MESSAGE);
-		return getElementText(BasePageUI.NOTICICATION_BAR_MESSAGE);
-	}
-
-	public void clickToCloseButtonAtNotificationBar() {
-		waitForElementClickable(BasePageUI.NOTICICATION_BAR_CLOSE_BUTTON);
-		clickToElement(BasePageUI.NOTICICATION_BAR_CLOSE_BUTTON);
-		sleepInSecond(1);
-	}
-
-	public void clickToLinkAtNotificationBar(String linkText) {
-		waitForElementClickable(BasePageUI.NOTICICATION_BAR_LINK, linkText);
-		clickToElement(BasePageUI.NOTICICATION_BAR_LINK, linkText);
-	}
-
-
-	public void hoverMouseToMenu(String label) {
-		waitForElementVisible(BasePageUI.MENU_LINK_DYNAMIC, label);
-		hoverMouseToElement(BasePageUI.MENU_LINK_DYNAMIC, label);
-	}
-
-	public void clickToLinkAtMenu(String label) {
-		waitForElementClickable(BasePageUI.MENU_LINK_DYNAMIC, label);
-		clickToElement(BasePageUI.MENU_LINK_DYNAMIC, label);
-	}
-
-	public ProductDetailPageObj openProductDetailByProductName(String productName) {
-		waitForElementClickable(BasePageUI.PRODUCT_DETAIL_BY_PRODUCTNAME_DYNAMIC, productName);
-		clickToElement(BasePageUI.PRODUCT_DETAIL_BY_PRODUCTNAME_DYNAMIC, productName);
-		return PageGeneratorManager.getProductDetailPage(driver);
-	}
-
-	public HomePageObj clickToLogo() {
-		waitForElementClickable(BasePageUI.WEB_LOGO);
-		clickToElement(BasePageUI.WEB_LOGO);
-		return PageGeneratorManager.getHomePage(driver);
-	}
-
-	public void checkToRadioButtonByLabel(String label) {
-		waitForElementClickable(BasePageUI.LABEL_RADIO, label);
-		checkToDefaultCheckboxOrRadio(BasePageUI.LABEL_RADIO, label);
-	}
-
-	public boolean isPageDisplayed(String pageName) {
-		return isElementDisplayed(BasePageUI.PAGE_TITLE, pageName);
-	}
-
-
-	public void clickToLink(String linkText) {
-		waitForElementClickable(BasePageUI.TEXTVALUE_LINK_DYNAMIC, linkText);
-		clickToElement(BasePageUI.TEXTVALUE_LINK_DYNAMIC, linkText);
-	}
-
-	public String getPageBody() {
-		waitForElementVisible(BasePageUI.PAGE_BODY);
-		return getElementText(BasePageUI.PAGE_BODY);
-	}
-
 	public void clickToBrowserBackButton() {
 		backToPage();
-	}
-
-
-	public List<String> getProductList() {
-		return getListWebElement(BasePageUI.PRODUCT_NAME)
-				.stream()
-				.map(WebElement::getText)
-				.collect(Collectors.toList());
-	}
-
-	public void clickToButtonOfAProduct(String productName, String buttonName) {
-		waitForElementClickable(BasePageUI.PRODUCT_BUTTONS_DYNAMIC, productName, buttonName);
-		clickToElement(BasePageUI.PRODUCT_BUTTONS_DYNAMIC, productName, buttonName);
-		sleepInSecond(1);
-	}
-
-	public void inputToTextboxByPlaceholder(String placeHolder, String value) {
-		waitForElementVisible(BasePageUI.PLACEHOLDER_TEXTBOX_DYNAMIC, placeHolder);
-		sendKeysToElement(BasePageUI.PLACEHOLDER_TEXTBOX_DYNAMIC, value, placeHolder);
-	}
-
-	public int getOrderNumber() {
-		waitForElementVisible(BasePageUI.ORDER_NUMBER);
-		String orderNumber = getElementText(BasePageUI.ORDER_NUMBER);
-		return extractOrderNumber(orderNumber);
 	}
 
 	protected int extractOrderNumber(String input) {
@@ -738,7 +598,6 @@ public class BasePage {
 			throw new IllegalArgumentException("No valid ORDER NUMBER found in the input");
 		}
 	}
-
 
 }
 

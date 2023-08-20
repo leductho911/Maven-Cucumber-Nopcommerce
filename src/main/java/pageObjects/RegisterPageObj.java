@@ -15,37 +15,10 @@ public class RegisterPageObj extends BasePage {
 		this.driver = driver;
 	}
 
-
-
-	public String getErrorMessageAtEmailTextbox() {
-		waitForElementVisible(RegisterPageUI.EMAIL_ERROR_MESSAGE);
-		return getElementText(RegisterPageUI.EMAIL_ERROR_MESSAGE);
-	}
-
-	public String getErrorMessageAtFirstnameTextbox() {
-		waitForElementVisible(RegisterPageUI.FIRSTNAME_ERROR_MESSAGE);
-		return getElementText(RegisterPageUI.FIRSTNAME_ERROR_MESSAGE);
-	}
-	public String getErrorMessageAtLastnameTextbox() {
-		waitForElementVisible(RegisterPageUI.LASTNAME_ERROR_MESSAGE);
-		return getElementText(RegisterPageUI.LASTNAME_ERROR_MESSAGE);
-	}
-
-
-	public String getErrorMessageAtPasswordTextbox() {
-		waitForElementVisible(RegisterPageUI.PASSWORD_ERROR_MESSAGE);
-		return getElementText(RegisterPageUI.PASSWORD_ERROR_MESSAGE);
-	}
-	public String getErrorMessageAtConfirmPasswordTextbox() {
-		waitForElementVisible(RegisterPageUI.CONFIRMPASSWORD_ERROR_MESSAGE);
-		return getElementText(RegisterPageUI.CONFIRMPASSWORD_ERROR_MESSAGE);
-	}
 	public String getRegisterSuccessMessage() {
 		waitForElementVisible(RegisterPageUI.REGISTER_SUCCESS_MESSAGE);
 		return getElementText(RegisterPageUI.REGISTER_SUCCESS_MESSAGE);
 	}
-	public String getRegisterFailMessage() {
-		waitForElementVisible(RegisterPageUI.REGISTER_FAIL_MESSAGE);
-		return getElementText(RegisterPageUI.REGISTER_FAIL_MESSAGE);
-	}
+
+
 }
