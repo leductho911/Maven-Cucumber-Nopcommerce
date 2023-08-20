@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 				"json:target/cucumber-reports/TestRunner.json",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" },
 		snippets = CucumberOptions.SnippetType.CAMELCASE,
-		tags = "@register_login")
+		tags = "@register_success")
 
 public class TestRunner {
 }

@@ -1,7 +1,7 @@
 @register_login
 Feature: User Registration and Login
 
-  @register_success
+  @register
   Scenario Outline: Successful registration
     Given the user is on the registration page
     When the user input to "First name" textbox with value "<firstname>"
