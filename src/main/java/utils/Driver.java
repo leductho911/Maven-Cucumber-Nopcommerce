@@ -22,6 +22,7 @@ public class Driver {
 				if (browser == null) {
 					browser = "chrome";
 				}
+				Log.info("Run on browser: " + browser);
 				switch (browser.toLowerCase()) {
 					case "firefox":
 						WebDriverManager.firefoxdriver().setup();
