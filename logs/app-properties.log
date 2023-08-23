@@ -1,0 +1,17 @@
+[INFO] 23-08-2023 18:17:25 [main] Log - Run on browser: chrome
+[INFO] 23-08-2023 18:17:25 [main] Log - Run on browser: null
+[INFO] 23-08-2023 18:17:25 [main] Log - Scenario started: _S_u_c_c_e_s_s_f_u_l_ _r_e_g_i_s_t_r_a_t_i_o_n_
+[INFO] 23-08-2023 18:17:25 [main] Log - Run on browser: null
+[INFO] 23-08-2023 18:17:27 [main] Log - Run on browser: null
+[INFO] 23-08-2023 18:17:28 [main] Log - Scenario started: _S_u_c_c_e_s_s_f_u_l_ _r_e_g_i_s_t_r_a_t_i_o_n_
+[INFO] 23-08-2023 18:20:15 [main] Log - Run on browser: chrome
+[INFO] 23-08-2023 18:20:17 [main] Log - Scenario started: Successful_registration
+[ERROR] 23-08-2023 18:20:50 [main] Log - Scenario failed: _S_u_c_c_e_s_s_f_u_l_ _r_e_g_i_s_t_r_a_t_i_o_n_
+[INFO] 23-08-2023 18:20:50 [main] Log - Scenario started: _S_u_c_c_e_s_s_f_u_l_ _r_e_g_i_s_t_r_a_t_i_o_n_
+[INFO] 23-08-2023 18:23:33 [main] Log - Run on browser: chrome
+[INFO] 23-08-2023 18:23:35 [main] Log - Scenario started: Successful_registration
+[ERROR] 23-08-2023 18:24:09 [main] Log - Scenario failed: Successful_registration
+[INFO] 23-08-2023 18:24:09 [main] Log - Scenario ended: Successful_registration
+[INFO] 23-08-2023 18:25:11 [main] Log - Run on browser: firefox
+[INFO] 23-08-2023 18:25:15 [main] Log - Scenario started: Successful_registration
+[INFO] 23-08-2023 18:25:17 [main] Log - Scenario ended: Successful_registration
