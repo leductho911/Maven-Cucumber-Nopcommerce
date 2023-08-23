@@ -17,4 +17,4 @@ Feature: Register New User
 
     Examples:
       | firstname | lastname | email                | password   |
-      | Ngoc      | Trang    | tester343525@example.com | Secret123  |
+      | Ngoc      | Trang    | tester3525@example.com | Secret123  |

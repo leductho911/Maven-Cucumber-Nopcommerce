@@ -3,7 +3,10 @@ package utils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 
 public class Driver {
@@ -19,16 +22,27 @@ public class Driver {
 				if (browser == null) {
 					browser = "chrome";
 				}
-
-				if ("chrome".equalsIgnoreCase(browser)) {
-					WebDriverManager.chromedriver().setup();
-					driver = new ChromeDriver();
-				} else if ("firefox".equalsIgnoreCase(browser)) {
-					WebDriverManager.firefoxdriver().setup();
-					driver = new FirefoxDriver();
-				} else {
-					WebDriverManager.chromedriver().setup();
-					driver = new ChromeDriver();
+				switch (browser.toLowerCase()) {
+					case "firefox":
+						WebDriverManager.firefoxdriver().setup();
+						driver = new FirefoxDriver();
+						break;
+					case "edge":
+						WebDriverManager.edgedriver().setup();
+						driver = new EdgeDriver();
+						break;
+					case "chrome-headless":
+						WebDriverManager.chromedriver().setup();
+						driver = new ChromeDriver(new ChromeOptions().addArguments("--headless=new"));
+						break;
+					case "firefox-headless":
+						WebDriverManager.firefoxdriver().setup();
+						driver = new FirefoxDriver(new FirefoxOptions().addArguments("--headless=new"));
+						break;
+					default:
+						WebDriverManager.chromedriver().setup();
+						driver = new ChromeDriver();
+						break;
 				}
 
 			} catch (Exception e) {
@@ -36,7 +50,6 @@ public class Driver {
 			}
 		}
 		return driver;
-
 	}
 
 	public static void closeDriver(){
