@@ -1,4 +1,4 @@
-package stepDefinitions;
+package definitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,7 +13,6 @@ public class RegisterPageSteps {
 
 	@Given("the user is on the registration page")
 	public void theUserIsOnTheRegistrationPage() {
-//		Driver.get().get("https://demo.nopcommerce.com/register?returnUrl=%2F");
 		registerPage.openPageUrl("https://demo.nopcommerce.com/register?returnUrl=%2F");
 		String expectedUrl = "https://demo.nopcommerce.com/register?returnUrl=%2F";
 		assertEquals(Driver.get().getCurrentUrl(), expectedUrl);

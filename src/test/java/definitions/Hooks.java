@@ -1,4 +1,4 @@
-package stepDefinitions;
+package definitions;
 import java.time.Duration;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -20,7 +20,5 @@ public class Hooks {
 	public void tearDown(Scenario scenario) {
 		Driver.closeDriver();
 	}
-
-
 
 }
