@@ -1,5 +1,6 @@
-package commons;
+package pages;
 
+import commons.GlobalConstants;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
@@ -7,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageUIs.CommonPageUI;
+import utils.Driver;
 
 import java.time.Duration;
 import java.util.*;
@@ -21,8 +24,8 @@ public class BasePage {
 	private final long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
 	private WebDriver driver;
 
-	public BasePage(WebDriver driver) {
-		this.driver = driver;
+	public BasePage() {
+		this.driver = Driver.get();
 	}
 
 	public float convertStringToFloat(String priceString) {
@@ -597,6 +600,16 @@ public class BasePage {
 		} else {
 			throw new IllegalArgumentException("No valid ORDER NUMBER found in the input");
 		}
+	}
+
+	public void clickToButton(String button) {
+		waitForElementClickable(CommonPageUI.BUTTON, button);
+		clickToElement(CommonPageUI.BUTTON, button);
+	}
+
+	public void inputToTextboxByLabel(String label, String value) {
+		waitForElementClickable(CommonPageUI.LABEL_INPUT, label);
+		sendKeysToElement(CommonPageUI.LABEL_INPUT, value, label);
 	}
 
 }
