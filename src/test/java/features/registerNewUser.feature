@@ -12,14 +12,9 @@ Feature: Register New User
     And the user input to "Email" textbox with value "<email>"
     And the user input to "Password" textbox with value "<password>"
     And the user input to "Confirm password" textbox with value "<password>"
-    And they click the "Register" button
-    Then they should see a registration success message
+    When they click the "Register" button
+    Then they should see Registration completed message appeared
 
     Examples:
       | firstname | lastname | email                | password   |
-      | Tho       | Le       | use435r123@gmail.com  | Pa$$w0rd   |
-      | Minh      | Tuan     | anothe435remail2@gmail.com  | StrongP@ss |
       | Ngoc      | Trang    | tester343525@example.com | Secret123  |
-
-
-

@@ -1,33 +1,15 @@
-package pageObjects;
+package pages;
 
-import commons.BasePage;
-import commons.PageGeneratorManager;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pageUIs.CommonPageUI;
-import pageUIs.LoginPageUI;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CommonPageObj extends BasePage {
-	private WebDriver driver;
+public class CommonPage extends BasePage {
 
-	public CommonPageObj(WebDriver driver) {
-		super(driver);
-		this.driver = driver;
-	}
 
-	public void clickToButton(String button) {
-		waitForElementClickable(CommonPageUI.BUTTON, button);
-		clickToElement(CommonPageUI.BUTTON, button);
-		sleepInSecond(1);
-	}
 
-	public void inputToTextboxByLabel(String label, String value) {
-		waitForElementClickable(CommonPageUI.LABEL_INPUT, label);
-		sendKeysToElement(CommonPageUI.LABEL_INPUT, value, label);
-	}
 
 	public void clickToLinkAtHeader(String linkText) {
 		waitForElementClickable(CommonPageUI.HEADER_LINKS, linkText);
@@ -92,11 +74,7 @@ public class CommonPageObj extends BasePage {
 	}
 
 
-	public HomePageObj clickToLogo() {
-		waitForElementClickable(CommonPageUI.WEB_LOGO);
-		clickToElement(CommonPageUI.WEB_LOGO);
-		return PageGeneratorManager.getHomePage(driver);
-	}
+
 
 	public void checkToRadioButtonByLabel(String label) {
 		waitForElementClickable(CommonPageUI.LABEL_RADIO, label);
