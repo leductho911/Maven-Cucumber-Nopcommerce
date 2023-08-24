@@ -52,3 +52,15 @@
 [INFO] 24-08-2023 16:24:02 [main] Log - Run on browser: chrome
 [INFO] 24-08-2023 16:24:05 [main] Log - Scenario started: Successful_registration_and_login
 [INFO] 24-08-2023 16:24:10 [main] Log - Scenario ended: Successful_registration_and_login
+[INFO] 24-08-2023 16:59:03 [main] Log - Run on browser: chrome
+[INFO] 24-08-2023 16:59:04 [main] Log - Scenario started: Sharing_Scenario_Context_between_Cucumber_Step_Definitions
+[INFO] 24-08-2023 16:59:04 [main] Log - Scenario ended: Sharing_Scenario_Context_between_Cucumber_Step_Definitions
+[INFO] 24-08-2023 17:00:39 [main] Log - Run on browser: chrome
+[INFO] 24-08-2023 17:00:41 [main] Log - Scenario started: Sharing_Scenario_Context_between_Cucumber_Step_Definitions
+[INFO] 24-08-2023 17:00:41 [main] Log - Scenario ended: Sharing_Scenario_Context_between_Cucumber_Step_Definitions
+[INFO] 24-08-2023 18:18:15 [main] Log - Run on browser: chrome
+[INFO] 24-08-2023 18:18:17 [main] Log - Scenario started: Sharing_Scenario_Context_between_Cucumber_Step_Definitions
+[INFO] 24-08-2023 18:18:18 [main] Log - Scenario ended: Sharing_Scenario_Context_between_Cucumber_Step_Definitions
+[INFO] 24-08-2023 18:18:36 [main] Log - Run on browser: chrome
+[INFO] 24-08-2023 18:18:38 [main] Log - Scenario started: Successful_registration_and_login
+[INFO] 24-08-2023 18:18:45 [main] Log - Scenario ended: Successful_registration_and_login

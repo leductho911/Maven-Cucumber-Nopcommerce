@@ -1,6 +1,7 @@
 package definitions;
 
 import commons.GlobalConstants;
+import hooks.ScenarioContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,8 +14,10 @@ public class RegisterPageSteps {
 	RegisterPage registerPage = new RegisterPage();
 	DataFaker dataFaker;
 	public static String validEmail, validPassword, validFirstName, validLastname;
+	private ScenarioContext scenarioContext;
 
-	public RegisterPageSteps() {
+	public RegisterPageSteps(ScenarioContext context) {
+		scenarioContext = context;
 		dataFaker = DataFaker.getDataFaker();
 		validFirstName = dataFaker.getFirstName();
 		validLastname = dataFaker.getLastName();
@@ -43,7 +46,9 @@ public class RegisterPageSteps {
 		registerPage.inputToTextboxByLabel("First name", validFirstName);
 		registerPage.inputToTextboxByLabel("Last name", validLastname);
 		registerPage.inputToTextboxByLabel("Email", validEmail);
+		scenarioContext.setContext("validEmail", validEmail);
 		registerPage.inputToTextboxByLabel("Password", validPassword);
+		scenarioContext.setContext("validPassword", validPassword);
 		registerPage.inputToTextboxByLabel("Confirm password", validPassword);
 	}
 }
