@@ -15,3 +15,40 @@
 [INFO] 23-08-2023 18:25:11 [main] Log - Run on browser: firefox
 [INFO] 23-08-2023 18:25:15 [main] Log - Scenario started: Successful_registration
 [INFO] 23-08-2023 18:25:17 [main] Log - Scenario ended: Successful_registration
+[INFO] 23-08-2023 18:29:10 [main] Log - Run on browser: chrome
+[INFO] 23-08-2023 18:29:12 [main] Log - Scenario started: Successful_registration
+[ERROR] 23-08-2023 18:29:46 [main] Log - Scenario failed: Successful_registration
+[INFO] 23-08-2023 18:29:46 [main] Log - Scenario ended: Successful_registration
+[INFO] 23-08-2023 20:29:08 [main] Log - Run on browser: chrome
+[INFO] 23-08-2023 20:29:11 [main] Log - Scenario started: Successful_registration
+[INFO] 23-08-2023 20:29:14 [main] Log - Scenario ended: Successful_registration
+[INFO] 23-08-2023 22:00:08 [main] Log - Run on browser: chrome
+[INFO] 23-08-2023 22:00:11 [main] Log - Scenario started: Successful_registration
+[INFO] 23-08-2023 22:00:14 [main] Log - Scenario ended: Successful_registration
+[INFO] 23-08-2023 22:34:44 [main] Log - Run on browser: chrome
+[INFO] 23-08-2023 22:34:47 [main] Log - Scenario started: Successful_registration
+[ERROR] 23-08-2023 22:35:19 [main] Log - Scenario failed: Successful_registration
+[INFO] 23-08-2023 22:35:19 [main] Log - Scenario ended: Successful_registration
+[INFO] 23-08-2023 22:41:13 [main] Log - Run on browser: chrome
+[INFO] 23-08-2023 22:41:15 [main] Log - Scenario started: Successful_registration
+[INFO] 23-08-2023 22:41:19 [main] Log - Scenario ended: Successful_registration
+[INFO] 24-08-2023 15:15:43 [main] Log - Run on browser: chrome
+[INFO] 24-08-2023 15:15:47 [main] Log - Scenario started: Successful_registration
+[INFO] 24-08-2023 15:15:50 [main] Log - Scenario ended: Successful_registration
+[INFO] 24-08-2023 15:15:51 [main] Log - Run on browser: chrome
+[INFO] 24-08-2023 15:15:51 [main] Log - Scenario started: Successful_login_after_registration
+[ERROR] 24-08-2023 15:16:24 [main] Log - Scenario failed: Successful_login_after_registration
+[INFO] 24-08-2023 15:16:24 [main] Log - Scenario ended: Successful_login_after_registration
+[INFO] 24-08-2023 15:17:17 [main] Log - Run on browser: chrome
+[INFO] 24-08-2023 15:17:19 [main] Log - Scenario started: Successful_registration
+[INFO] 24-08-2023 15:17:22 [main] Log - Scenario ended: Successful_registration
+[INFO] 24-08-2023 15:17:23 [main] Log - Run on browser: chrome
+[INFO] 24-08-2023 15:17:23 [main] Log - Scenario started: Successful_login_after_registration
+[ERROR] 24-08-2023 15:17:56 [main] Log - Scenario failed: Successful_login_after_registration
+[INFO] 24-08-2023 15:17:56 [main] Log - Scenario ended: Successful_login_after_registration
+[INFO] 24-08-2023 16:15:00 [main] Log - Run on browser: chrome
+[INFO] 24-08-2023 16:15:02 [main] Log - Scenario started: Successful_registration_and_login
+[INFO] 24-08-2023 16:15:07 [main] Log - Scenario ended: Successful_registration_and_login
+[INFO] 24-08-2023 16:24:02 [main] Log - Run on browser: chrome
+[INFO] 24-08-2023 16:24:05 [main] Log - Scenario started: Successful_registration_and_login
+[INFO] 24-08-2023 16:24:10 [main] Log - Scenario ended: Successful_registration_and_login

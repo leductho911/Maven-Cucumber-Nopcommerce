@@ -1,4 +1,4 @@
-package definitions;
+package hooks;
 import java.time.Duration;
 
 import io.cucumber.java.*;
