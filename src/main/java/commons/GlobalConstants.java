@@ -11,5 +11,8 @@ public class GlobalConstants {
 	public static final long LONG_TIMEOUT = 30;
 
 	public static final String UPLOAD_FILE = PROJECT_PATH + File.separator + "uploadFiles" + File.separator;
-	public static final String DEV_URL = "https://demo.nopcommerce.com/";
+	public static final String HOMEPAGE_URL = "https://demo.nopcommerce.com/";
+	public static final String LOGIN_URL = HOMEPAGE_URL + "login?returnUrl=%2F";
+	public static final String REGISTER_URL = HOMEPAGE_URL + "register?returnUrl=%2F";
+
 }

@@ -5,7 +5,7 @@ import pageUIs.RegisterPageUI;
 public class RegisterPage extends BasePage {
 
 
-	public String getErrorMessage() {
+	public String getFirstNameErrorMessage() {
 		waitForElementVisible(RegisterPageUI.FIRSTNAME_ERROR_MESSAGE);
 		return getElementText(RegisterPageUI.FIRSTNAME_ERROR_MESSAGE);
 	}

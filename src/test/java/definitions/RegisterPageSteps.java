@@ -1,41 +1,50 @@
 package definitions;
 
+import commons.GlobalConstants;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.RegisterPage;
-import utils.Driver;
+import utils.DataFaker;
 import static org.junit.Assert.assertEquals;
 
 
 public class RegisterPageSteps {
 	RegisterPage registerPage = new RegisterPage();
+	DataFaker dataFaker;
+	public static String validEmail, validPassword, validFirstName, validLastname;
+
+	public RegisterPageSteps() {
+		dataFaker = DataFaker.getDataFaker();
+		validFirstName = dataFaker.getFirstName();
+		validLastname = dataFaker.getLastName();
+		validEmail = dataFaker.getEmail();
+		validPassword = dataFaker.getPassword();
+	}
 
 	@Given("the user is on the registration page")
 	public void theUserIsOnTheRegistrationPage() {
-		registerPage.openPageUrl("https://demo.nopcommerce.com/register?returnUrl=%2F");
-		String expectedUrl = "https://demo.nopcommerce.com/register?returnUrl=%2F";
-		assertEquals(Driver.get().getCurrentUrl(), expectedUrl);
-	}
-
-	@When("they click the {string} button")
-	public void theyClickTheButton(String buttonName) {
-		registerPage.clickToButton(buttonName);
+		registerPage.openPageUrl(GlobalConstants.REGISTER_URL);
+		assertEquals(GlobalConstants.REGISTER_URL, registerPage.getPageUrl());
 	}
 
 	@Then("they should see First name error message appear")
 	public void theyShouldSeeAnErrorMessageAppear() {
-		assertEquals("First name is required.", registerPage.getErrorMessage());
-	}
-
-	@When("the user input to {string} textbox with value {string}")
-	public void theUserInputToTextboxWithValue(String textboxLabel, String value) {
-		registerPage.inputToTextboxByLabel(textboxLabel, value);
+		assertEquals("First name is required.", registerPage.getFirstNameErrorMessage());
 	}
 
 	@Then("they should see Registration completed message appeared")
 	public void theyShouldSeeRegistrationCompletedMessageAppeared() {
 		assertEquals("Your registration completed", registerPage.getRegistrationCompletedMessage());
+	}
+
+	@When("the user enter valid registration details")
+	public void theUserEnterValidRegistrationDetails() {
+		registerPage.inputToTextboxByLabel("First name", validFirstName);
+		registerPage.inputToTextboxByLabel("Last name", validLastname);
+		registerPage.inputToTextboxByLabel("Email", validEmail);
+		registerPage.inputToTextboxByLabel("Password", validPassword);
+		registerPage.inputToTextboxByLabel("Confirm password", validPassword);
 	}
 }
 
