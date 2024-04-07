@@ -4,17 +4,14 @@ import org.aeonbits.owner.ConfigFactory;
 import utils.Environment;
 
 import java.io.File;
+import java.util.Objects;
 
 public class GlobalConstants {
 	static Environment environment;
 
 	static {
 		String environmentName = System.getProperty("environment");
-		if (environmentName != null) {
-			ConfigFactory.setProperty("env", environmentName);
-		} else {
-			throw new IllegalStateException("'environment' system property is not set.");
-		}
+		ConfigFactory.setProperty("env", Objects.requireNonNullElse(environmentName, "dev"));
 		environment = ConfigFactory.create(Environment.class);
 	}
 
