@@ -16,6 +16,7 @@ import org.junit.runner.RunWith;
 		tags = "@register_and_login")
 
 public class TestRunner {
+	// mvn clean test -Denvironment=dev
 }
 
 
